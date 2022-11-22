@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+
+string titolo = "La guerra dei mondi";
+string autore = "H. G. Wells";
+string
