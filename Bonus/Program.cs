@@ -8,6 +8,7 @@ string autoreLibro = Console.ReadLine();
 
 Console.WriteLine("Inserisci l' ISBN del libro");
 string isbnLibro = Console.ReadLine();
+isbnLibro.ToUpper();
 
 Console.WriteLine("Inserisci il numero di pagine del libro");
 int numPagineLibro = int.Parse(Console.ReadLine());
@@ -32,12 +33,9 @@ int numeroRecensioni = int.Parse(Console.ReadLine());
 
 Console.WriteLine("Il libro è presente su kindle? (y='si' ; n='no')");
 string isOnKindle = Console.ReadLine();
-
+                                                                                              
 Console.WriteLine("E' disponibile la versione con copertina flessibile? (y='si' ; n='no') ");
 string flexCoverAvailable = Console.ReadLine();
-
-
-
 
 // Inizio a stampare le variabili
 Console.WriteLine("-------- " + titoloLibro + " --------");
@@ -47,15 +45,23 @@ Console.WriteLine("Numero Pagine: " + numPagineLibro);
 Console.WriteLine("Peso: " + pesoLibro + " g");
 Console.WriteLine("Dimensioni: " + dimensione1 + " cm, " + dimensione2 + " cm, " + dimensione3 + " cm, ");
 Console.WriteLine("Valutazione: " + valutazioneStelle + " stelle");
-Console.WriteLine("Numero Recensioni " + numeroRecensioni + " recensioni utente");
+Console.WriteLine("Numero Recensioni: " + numeroRecensioni + " recensioni utente");
+
+//If per generare risposte "Si" "No" "Errore"
+
 if (isOnKindle == "y")
 {
     Console.WriteLine("Disponibile su kindle: Si");
 }
 
-else
+else if (isOnKindle == "n")
 {
     Console.WriteLine("Disponibile su kindle: No");
+}
+
+else
+{
+    Console.WriteLine("L'input inserito non è valido");
 }
 
 if (flexCoverAvailable == "y")
@@ -63,9 +69,14 @@ if (flexCoverAvailable == "y")
     Console.WriteLine("Copertina flessibile disponibile: Si");
 }
 
-else
+else if (flexCoverAvailable == "n")
 {
     Console.WriteLine("Copertina flessibile disponibile: No");
+}
+
+else
+{
+    Console.WriteLine("L'input inserito non è valido");
 }
 
 
