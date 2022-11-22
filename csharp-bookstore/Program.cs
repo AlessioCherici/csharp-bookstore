@@ -23,6 +23,8 @@ Console.WriteLine("Dimensioni: " + dimensione1 + " cm, " + dimensione2 + " cm, "
 Console.WriteLine("Valutazione: " + valutazioneStelle + " stelle");
 Console.WriteLine("Numero Recensioni " + numeroRecensioni + " recensioni utente");
 
+//Creo due if per printare "si" anziche "true"
+
 if (isOnKindle == true)
 {
     Console.WriteLine("Disponibile su kindle: Si");
